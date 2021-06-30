@@ -2,3 +2,15 @@
     width:1024px;
     margin:0 auto;
 }
+
+.pop-up-notification{
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    border-radius:10px;
+    padding:20px;
+    width: 300px;
+    background-color:darkorange;
+    color:darkred;
+    display:none;
+}
