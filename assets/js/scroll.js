@@ -1,11 +1,19 @@
-$( window ).scroll(function(event) {
+$( document ).ready(function(){
+    $( window ).scroll(function(event) {
+        // console.log('ik ben aan het scrollen');
+        var yPosition = $(this).scrollTop();
 
-    var yPosition = $(this).scrollTop();
-    if (yPosition > 100) {
+        // console.log(yPosition);
+        if (yPosition > 100) {
+            // $( ".pop-up-notification" ).show();
+            $( ".pop-up-notification" ).show().on('click',function(event){
+                // $('html, body').animate({scrollTop: '+=150px'}, 800);
+                $('html, body').animate({scrollTop: '0px'});
+            });
+        }
 
-        $( ".pop-up-notification" ).show().click(function(event){
-            //$('html, body').animate({scrollTop: '+=150px'}, 800);
-            $('html, body').animate({scrollTop: '0px'});
-        });
-    }
+        if(yPosition <= 0 ){
+            $( ".pop-up-notification" ).hide();
+        }
+    });
 });
